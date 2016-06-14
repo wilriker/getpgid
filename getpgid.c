@@ -13,7 +13,11 @@ int main(int argc, char *argv[]) {
 		pid = 0;
 	} else {
 		pid	= strtol(argv[1], &p, 10);
-		if (pid < 0 || *p != '\0' || errno == ERANGE) {
+		if (*p != '\0') {
+			fprintf(stderr, "Not a number: %s\n", argv[1]);
+			return 1;
+		} else if (errno == ERANGE) {
+			perror(NULL);
 			return 1;
 		}
 	}
