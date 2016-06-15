@@ -12,7 +12,7 @@ This is solely dependent on `glibc>=2.12`
 
 # Building
 ```bash
-git clone https://github.com/wilriker/getpgid
+git clone https://github.com/wilriker/getpgid.git
 cd getpgid
 make
 make install
