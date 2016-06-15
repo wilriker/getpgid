@@ -17,6 +17,15 @@ cd getpgid
 make
 make install
 ```
+It will be installed to
+```
+/usr/bin/getpgid
+```
+You can use
+```
+make PREFIX=/path/to/dir install
+```
+to customize the installation location.
 
 # Usage
 Either use
